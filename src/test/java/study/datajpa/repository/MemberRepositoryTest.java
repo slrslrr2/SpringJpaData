@@ -330,7 +330,7 @@ class MemberRepositoryTest {
         gbitkim.get(0).changeTeam(team2);
 
         // team2로 나오지만 update문은 실행되지않는다
-       // System.out.println(gbitkim.get(0).getTeam().getName());
+      // System.out.println(gbitkim.get(0).getTeam().getName());
 
     }
 
@@ -344,5 +344,10 @@ class MemberRepositoryTest {
         em.clear();
 
         List<Member> gbitkim = memberRepository.findLockByUsername("gbitkim");
+    }
+
+    @Test
+    public void customMethod(){
+        List<Member> memberCustom = memberRepository.findMemberCustom();
     }
 }
